@@ -5,12 +5,16 @@ image:https://travis-ci.org/eurobench/pi_python_duration.svg?branch=master["Buil
 
 Copyright Tecnalia 2020
 
-This is an example of Performane Indicator Implemented in python.
+This is an example of Performance Indicator implemented in python.
 It is prepared to be used within the Eurobench Benchmarking Software.
+
+`pi_sample_duration` basically measures the duration of an experiment, by reading a unique `csv file` containing a `timestamp` column, and returns as PI values the difference between the timestamps of the last and first line recorded.
 
 Requires the following packages (install with `apt-get`): `python3`, `python3-venv` .
 
 And then run the following commands:
+
+== Installation
 
 [source, shell]
 ----
@@ -21,9 +25,7 @@ pip install -r src/pi_sample_duration/requirements.txt
 python src/pi_sample_duration/setup.py develop
 ----
 
-Last line should be verified although...
-
-== Launch the program
+== Usage
 
 [source, shell]
 ----
