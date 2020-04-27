@@ -47,7 +47,7 @@ class DirectCallTest(unittest.TestCase):
 
         # preparing the generation command
 
-        self.command = "./run_pi " + self.input_data_path + " "
+        self.command = "run_pi " + self.input_data_path + " "
         self.command += self.output_data_path
 
         self.log.debug("Command generated: \n{}".format(self.command))
