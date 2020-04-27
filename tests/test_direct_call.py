@@ -38,7 +38,9 @@ class DirectCallTest(unittest.TestCase):
 
         self.output_groundtruth_path = os.path.abspath(os.getcwd() + "/" + rel_path + "/data/output/")
 
+        self.log.debug("Relative path: {}".format(rel_path))
         self.log.debug("Input data in: {}".format(self.input_data_path))
+        self.log.debug("Output data in: {}".format(self.output_groundtruth_path))
 
         self.output_data_path = tempfile.mkdtemp()
         os.chmod(self.output_data_path, 0o777)
