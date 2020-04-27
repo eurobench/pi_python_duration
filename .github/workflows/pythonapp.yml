@@ -27,7 +27,7 @@ jobs:
     - name: Test package
       run: |
         pip install pytest
-        pytest
+        pytest src/pi_sample_duration
     - name: Test run_pi
       run:
         python tests/test_direct_call.py
