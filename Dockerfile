@@ -32,11 +32,6 @@ ADD run_pi /home/pi_runner
 
 # set the user as owner of the copied files.
 RUN chown -R pi_runner:pi_runner /home/pi_runner/
-# create folder for receiving input files and generated files
-RUN mkdir /out \
-    && mkdir /in
-# adjust folder properties
-RUN chown -R pi_runner:pi_runner /out/
 
 USER pi_runner
 WORKDIR /home/pi_runner
