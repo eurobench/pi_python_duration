@@ -12,6 +12,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Check secret available
+      env:
+        SECRET_DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
+        SECRET_DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      run: |
+        [ -z "$SECRET_DOCKERHUB_PASSWORD"]
     - name: Check variables
       env:
         EVENT_NAME: ${{ github.event_name }}
