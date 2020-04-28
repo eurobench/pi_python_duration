@@ -95,7 +95,7 @@ class DirectCallTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    print("test_direct_call -- testing image:")
+    print("test_direct_call:")
 
     logging.basicConfig(stream=sys.stderr, level=logging.DEBUG)
 
