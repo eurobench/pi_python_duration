@@ -21,6 +21,10 @@ jobs:
           echo "Missing variable SECRET_DOCKERHUB_PASSWORD"
           exit 1
         fi
+        if [[ -z "$SECRET_DOCKERHUB_USERNAME" ]]; then
+          echo "Missing variable SECRET_DOCKERHUB_USERNAME"
+          exit 1
+        fi
     - name: Check variables
       env:
         EVENT_NAME: ${{ github.event_name }}
