@@ -17,7 +17,10 @@ jobs:
         SECRET_DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
         SECRET_DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
       run: |
-        if [[ -z "$SECRET_DOCKERHUB_PASSWORD"]]; then echo "Missing variable SECRET_DOCKERHUB_PASSWORD" && exit 1; fi
+        if [[ -z "$SECRET_DOCKERHUB_PASSWORD" ]]; then
+          echo "Missing variable SECRET_DOCKERHUB_PASSWORD"
+          exit 1
+        fi
     - name: Check variables
       env:
         EVENT_NAME: ${{ github.event_name }}
