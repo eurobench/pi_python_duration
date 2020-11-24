@@ -26,8 +26,8 @@ jobs:
           exit 1
         fi
     - name: Get latest release version number
-        id: get_version
-        uses: battila7/get-version-action@v2
+      id: get_version
+      uses: battila7/get-version-action@v2
     - name: Check variables
       env:
         EVENT_NAME: ${{ github.event_name }}
