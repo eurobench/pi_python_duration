@@ -37,5 +37,5 @@ jobs:
     - name: test the docker image
       env:
         TEST_PLAN: tests/test_plan.xml
-        DOCKER_IMAGE: ${{ github.event.repository.name }}:${{ github.head_ref }}
+        DOCKER_IMAGE: ${{ github.event.repository.name }}:${{ steps.getbranchname.outputs.branch }}
       run:  python3 test_docker_call.py
