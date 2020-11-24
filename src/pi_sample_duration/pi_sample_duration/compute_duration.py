@@ -45,7 +45,7 @@ def compute_duration(file_ja_name):
 def store_result(file_out, value):
 
     file = open(file_out, 'w')
-    file.write('type: \'scalar\'\nvalue: ' + format(value, '.5f'))
+    file.write('type: \'scalar\'\nvalue: ' + format(value, '.5f') + '\n')
     file.close()
 
     return True
